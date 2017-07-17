@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="module_cardinals-nation-live-ii-" default="compile.module.cardinals-nation-live-ii-">
+  <dirname property="module.cardinals-nation-live-ii-.basedir" file="${ant.file.module_cardinals-nation-live-ii-}"/>
+  
+  <property name="module.jdk.home.cardinals-nation-live-ii-" value="${project.jdk.home}"/>
+  <property name="module.jdk.bin.cardinals-nation-live-ii-" value="${project.jdk.bin}"/>
+  <property name="module.jdk.classpath.cardinals-nation-live-ii-" value="${project.jdk.classpath}"/>
+  
+  <property name="compiler.args.cardinals-nation-live-ii-" value="-encoding UTF-8 -source 8 -target 1.8 ${compiler.args}"/>
+  
+  <property name="cardinals-nation-live-ii-.output.dir" value="undefined"/>
+  <property name="cardinals-nation-live-ii-.testoutput.dir" value="undefined"/>
+  
+  <path id="cardinals-nation-live-ii-.module.bootclasspath">
+    <!-- Paths to be included in compilation bootclasspath -->
+  </path>
+  
+  <path id="cardinals-nation-live-ii-.module.production.classpath"/>
+  
+  <path id="cardinals-nation-live-ii-.runtime.production.module.classpath"/>
+  
+  <path id="cardinals-nation-live-ii-.module.classpath"/>
+  
+  <path id="cardinals-nation-live-ii-.runtime.module.classpath"/>
+  
+  
+  <patternset id="excluded.from.module.cardinals-nation-live-ii-">
+    <patternset refid="ignored.files"/>
+  </patternset>
+  
+  <patternset id="excluded.from.compilation.cardinals-nation-live-ii-">
+    <patternset refid="excluded.from.module.cardinals-nation-live-ii-"/>
+  </patternset>
+  
+  
+  <target name="compile.module.cardinals-nation-live-ii-" depends="compile.module.cardinals-nation-live-ii-.production,compile.module.cardinals-nation-live-ii-.tests" description="Compile module Cardinals-Nation-Live-II-"/>
+  
+  <target name="compile.module.cardinals-nation-live-ii-.production" depends="register.custom.compilers" description="Compile module Cardinals-Nation-Live-II-; production classes"/>
+  
+  <target name="compile.module.cardinals-nation-live-ii-.tests" depends="register.custom.compilers,compile.module.cardinals-nation-live-ii-.production" description="compile module Cardinals-Nation-Live-II-; test classes" unless="skip.tests"/>
+  
+  <target name="clean.module.cardinals-nation-live-ii-" description="cleanup module">
+    <delete dir="${cardinals-nation-live-ii-.output.dir}"/>
+    <delete dir="${cardinals-nation-live-ii-.testoutput.dir}"/>
+  </target>
+</project>
